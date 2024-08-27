@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="destination.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <title>Space | Destination</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            destinationPage.style.borderBottom = '3px solid white'
+            console.log('page has loaded')
+
+            //Mobile Media Query
+            var x = window.matchMedia("(max-width: 600px)");
+
+            if (x.matches) {
+                destinationPage.style.borderBottom = 'none'
+                destinationPage.style.borderRight = '5px solid white'
+            }
+        })
+    </script>
+</head>
+
+<body class="destination-body">
+    <div class="container">
+        <header>
+            <button id="toggle-open"><img src="assets/shared/icon-hamburger.svg" alt="icon-hamburger"></button>
+            <button id="toggle-close"><img src="assets/shared/icon-close.svg" alt="icon-close"></button>
+            <div class="logo-wrapper">
+                <img src="assets/shared/logo.svg" alt="site logo">
+            </div>
+            <nav id="navbar">
+                <ol>
+                    <li><a href="index.html">
+                            <p>00</p>Home
+                        </a>
+                    </li>
+                    <li><a id="destination" href="destination.html">
+                            <p>01</p>Destination
+                        </a>
+                    </li>
+                    <li><a href="crew.html">
+                            <p>02</p>Crew
+                        </a>
+                    </li>
+                    <li><a href="technology.html">
+                            <p>03</p>Technology
+                        </a>
+                    </li>
+                </ol>
+            </nav>
+        </header>
+
+        <div class="main">
+            <div class="destination-section1">
+                <h3 class="listing">01</h3>
+                <h3 class="h3-destination">PICK YOUR DESTINATION</h3>
+            </div>
+
+            <div class="destination-section2">
+                <div class="planet">
+                    <img id="planet-image" src="assets/destination/image-moon.png" alt="The Planet">
+                </div>
+            </div>
+
+            <div class="destination-section3">
+                <div class="section-nav">
+                    <ul>
+                        <li><a id="moon" href="#">MOON</a></li>
+                        <li><a id="mars" href="#">MARS</a></li>
+                        <li><a id="europa" href="#">EUROPA</a></li>
+                        <li><a id="titan" href="#">TITAN</a></li>
+                    </ul>
+                </div>
+                <div class="section-details">
+                    <h1 id="planet-name">MOON</h1>
+                    <p id="planet-details">
+                        See our planet as you've never seen it before. A perfect
+                        relaxing trip away to help regain perspective and come back 
+                        refreshed. While you're there, take in some history by visiting 
+                        the Luna 2 and Apollo 11 landing sites.
+                    </p>
+                </div>
+                <div class="planet-features">
+                    <hr>
+                    <div>
+                        <div class="distance">
+                            <h3>AVG. DISTANCE</h3>
+                            <h2 id="planet-distance">384,400 KM</h2>
+                        </div>
+                        <div class="time">
+                           <h3>EST.TRAVEL TIME</h3>
+                           <h2 id="travel-time">3 DAYS</h2> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

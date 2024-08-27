@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <title>Space | TourismT</title>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    homePage.style.borderBottom = '3px solid white'
+
+    //Mobile Media Query
+    var x = window.matchMedia("(max-width: 600px)");
+
+    if (x.matches) {
+      homePage.style.borderBottom = 'none'
+      homePage.style.borderRight = '5px solid white'
+    }
+    console.log('page has loaded')
+    })
+  </script>
+</head>
+<body id="index-body" class="index-body">
+  <div class="container">
+    <header>
+      <button id="toggle-open"><img src="assets/shared/icon-hamburger.svg" alt="icon-hamburger"></button>
+      <button id="toggle-close"><img src="assets/shared/icon-close.svg" alt="icon-close"></button>
+      <div class="logo-wrapper">
+        <img src="assets/shared/logo.svg" alt="site logo">
+      </div>
+      <nav id="navbar">
+        <ol>
+        <li><a id="home" href="index.html"><p>00</p>Home</a></li>
+        <li><a id="destination" href="destination.html"><p>01</p>Destination</a></li>
+        <li><a id="crew" href="crew.html"><p>02</p>Crew</a></li>
+        <li><a id="technology" href="technology.html"><p>03</p>Technology</a></li>
+        </ol>
+      </nav>
+    </header>
+
+    <div class="index-main">
+    <div class="index-section1">
+      <h3>SO, YOU WANT TO TRAVEL TO</h3>
+      <h1>SPACE</h1>
+      <p>  Let’s face it; if you want to go to space, you might as well genuinely go to 
+        outer space and not hover kind of on the edge of it. Well sit back, and relax 
+        because we’ll give you a truly out of this world experience!</p>
+    </div>
+
+    <div class="index-section2">
+      <div id="explore-circle" class="circle" onmouseover="explore()" onmouseout="exploreOut()">
+          <h2>EXPLORE</h2>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

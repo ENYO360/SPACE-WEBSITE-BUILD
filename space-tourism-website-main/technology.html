@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="technology.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <title>Space | TourismT</title>
+  <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            techPage.style.borderBottom = '3px solid white'
+            slideTech1()
+            console.log('page has loaded')
+
+        //Mobile Media Query
+        var x = window.matchMedia("(max-width: 600px)");
+
+        if (x.matches) {
+            techPage.style.borderBottom = 'none'
+            techPage.style.borderRight = '5px solid white'
+        }
+        })
+  </script>
+</head>
+<body class="tech-body">
+    <div class="tech-container">
+        <header>
+            <button id="toggle-open"><img src="assets/shared/icon-hamburger.svg" alt="icon-hamburger"></button>
+            <button id="toggle-close"><img src="assets/shared/icon-close.svg" alt="icon-close"></button>
+            <div class="logo-wrapper">
+                <img src="assets/shared/logo.svg" alt="site logo">
+              </div>
+            <nav id="navbar">
+                <ol>
+                <li><a href="index.html"><p>00</p>Home</a></li>
+                <li><a href="destination.html"><p>01</p>Destination</a></li>
+                <li><a href="crew.html"><p>02</p>Crew</a></li>
+                <li><a id="technology" href="technology.html"><p>03</p>Technology</a></li>
+                </ol>
+            </nav>
+        </header>
+
+        <div class="tech-main">
+            <div class="tech-section1">
+                <h3 class="listing">03</h3>  
+                <h3 class="h3-tech">SPACE LAUNCH 101</h3>
+            </div>
+
+            <div class="tech-section2">
+                <div class="circled-listing">
+                    <div id="tech-slider1" onclick="slideTech1()"><p id="slider-text1">1</p></div>
+                    <div id="tech-slider2" onclick="slideTech2()"><p id="slider-text2">2</p></div>
+                    <div id="tech-slider3" onclick="slideTech3()"><p id="slider-text3">3</p></div>
+                </div>
+                <div class="section-text">
+                    <h3>THE TERMINOLOGY...</h3>
+                    <h1 id="tech-name">LAUNCH VEHICLE</h1>
+                    <P id="tech-info">
+                        A launch vehicle or carrier rocket is a rocket-propelled vehicle 
+                        used to carry a payload from Earth's surface to space, usually to 
+                        Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful 
+                        in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad! 
+                    </P>
+                </div>
+            </div>
+            <div class="tech-section3">
+                <div>
+                    <img class="launch-vehicle-desktop tech-image" src="assets/technology/image-launch-vehicle-portrait.jpg" alt="launch vehicle">
+                    <img class="launch-vehicle-mobile tech-image" src="assets/technology/image-launch-vehicle-landscape.jpg" alt="launch vehicle landscape">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
